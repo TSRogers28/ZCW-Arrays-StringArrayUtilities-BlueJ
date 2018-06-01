@@ -49,7 +49,6 @@ public class StringArrayUtils {
         return false;
     }
 
-    
 
     /**
      * @param array of String objects
@@ -72,7 +71,7 @@ public class StringArrayUtils {
     public static boolean isPalindromic(String[] array){
         return (Arrays.equals(array, reverse(array)));
     }
-    
+
     /**
      * @param array array of String objects
      * @return true if each letter in the alphabet has been used in the array
@@ -82,7 +81,7 @@ public class StringArrayUtils {
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         StringBuilder brokenStringArr = new StringBuilder();
         for (String s : array){
-        brokenStringArr.append(s);
+            brokenStringArr.append(s);
         }
         String newString = brokenStringArr.toString();
         char [] toChar = newString.toCharArray();
@@ -91,6 +90,7 @@ public class StringArrayUtils {
         }
         return answer;
     }
+
     public static boolean contains(char[] array, char value) {
         for(char s: array){
             if (value == s) 
@@ -98,7 +98,7 @@ public class StringArrayUtils {
         }
         return false;
     }
-            
+
     /**
      * @param array array of String objects
      * @param value value to check array for
@@ -157,29 +157,31 @@ public class StringArrayUtils {
      * @return array of Strings with each consecutive duplicate occurrence concatenated as a single string in an array of Strings
      */ // TODO
     public static String[] packConsecutiveDuplicates(String[] array) {
-        int j = 0;
         int count = counterArray(array);
         String [] newArray = new String [array.length-count];
-
-        for(int x = 0; x < array.length-1; x++){
-            if(array[x].equals(array[x+1])){
+        newArray[0] = array[0];
+        int j = 0;
+        String previous = array[0];
+        for (int x=1; x<array.length; x++){
+            if((array[x].equals(previous))){
                 newArray[j] += array[x];
             }
-            else
-            newArray[j] = array[x];
-            j++;
+            else{
+                newArray[j] = array[x];
+                previous = array[x];
+                j++;
+            }
         }
         return newArray;
     }
-    
-    
+
     public static int counterArray(String[] array) {
-    int count = 0;    
-    for(int x = 0; x < array.length-1; x++){
+        int count = 0;    
+        for(int x = 0; x < array.length-1; x++){
             if (array[x].equals(array[x+1])){
                 count++;
             }
         }
-     return count;   
-}
+        return count;   
+    }
 }

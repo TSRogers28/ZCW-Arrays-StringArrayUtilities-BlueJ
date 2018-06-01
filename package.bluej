@@ -1,19 +1,22 @@
 #BlueJ package file
+dependency1.from=StringArrayUtilsTest
+dependency1.to=StringArrayUtils
+dependency1.type=UsesDependency
 editor.fx.0.height=722
 editor.fx.0.width=1053
-editor.fx.0.x=36
-editor.fx.0.y=-908
+editor.fx.0.x=-391
+editor.fx.0.y=-1057
 objectbench.height=164
 objectbench.width=776
 package.divider.horizontal=0.6
 package.divider.vertical=0.6845018450184502
 package.editor.height=364
 package.editor.width=674
-package.editor.x=14
-package.editor.y=23
+package.editor.x=8
+package.editor.y=49
 package.frame.height=600
 package.frame.width=800
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
