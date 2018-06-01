@@ -167,9 +167,9 @@ public class StringArrayUtils {
                 newArray[j] += array[x];
             }
             else{
+                j++;
                 newArray[j] = array[x];
                 previous = array[x];
-                j++;
             }
         }
         return newArray;
